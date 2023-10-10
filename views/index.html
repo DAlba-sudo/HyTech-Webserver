@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid p-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="">
+              <h2>HyTech Data Feed</h2>
+              <p>
+                The data to the right was ingested from the Teensy!
+                Not seeing any data? Buy Diego a coffee, and he'll help 
+                debug.  
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="text-end">
+              <h2>Data</h2>
+              <ul class="list-group">
+                {{range $val := .}}
+                    <li class="list-group-item text-wrap">{{.}}</li>
+                {{end}}
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
